@@ -6,12 +6,11 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent))]
 public class AgentController : MonoBehaviour
 {
-    [SerializeField]
-    private float seekTimeInterval = 2.0f;
+    [SerializeField] private float seekTimeInterval = 2.0f;
 
-    [SerializeField]
-    private Transform target;
+    [SerializeField] private Transform target;
 
+    // seekTime interval between player tracking updates
     private float seekTime = 0.0f;
     NavMeshAgent navAgent;
 
