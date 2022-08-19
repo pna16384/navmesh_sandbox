@@ -7,6 +7,7 @@ using UnityEngine.AI;
 public class AgentController : MonoBehaviour
 {
     [SerializeField] private float seekTimeInterval = 2.0f;
+    [SerializeField] private float seekTimeThreshold = 0.0f;
 
     [SerializeField] private Transform target;
 
@@ -25,7 +26,7 @@ public class AgentController : MonoBehaviour
     {
         seekTime -= Time.deltaTime;
 
-        if (seekTime <= 0.0f)
+        if (seekTime <= seekTimeThreshold)
         {
             seekTime = seekTimeInterval;
 
